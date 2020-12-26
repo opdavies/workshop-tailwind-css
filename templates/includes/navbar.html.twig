@@ -15,14 +15,27 @@
     <div class="absolute top-16 w-full bg-white" x-cloak x-show="isOpen">
         <ul>
             {% for item in menuLinks.findAll %}
-                <li>
-                    <a class="block px-5 py-5 text-2xl font-display text-blue-700 uppercase" href="#0">{{ item.name }}</a>
+                <li x-data="{ isOpen: false }">
+                    <a
+                        class="flex items-center justify-between px-5 py-5 text-2xl font-display text-blue-700 uppercase"
+                        href="#0"
+                        {% if item.children %}
+                            @click.prevent="isOpen = !isOpen"
+                        {% endif %}
+                    >
+                        <span>{{ item.name }}</span>
+                        {% if item.children %}
+                            <span>
+                                <svg class="w-8 h-8 fill-current text-gray-600" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </span>
+                        {% endif %}
+                    </a>
 
                     {% if item.children %}
-                        <ul class="bg-gray-100">
+                        <ul class="bg-gray-100" x-cloak x-show="isOpen">
                             {% for item in item.children %}
                                 <li>
-                                    <a class="block px-5 py-2 text-2xl font-display text-blue-700 uppercase" href="#0">
+                                    <a class="flex items-center justify-between px-5 py-2 text-2xl font-display text-blue-700 uppercase" href="#0">
                                         {{ item.name }}
                                     </a>
                                 </li>
