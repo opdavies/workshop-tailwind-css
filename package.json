@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "config": {
+    "inputFile": "assets/css/tailwind.pcss",
+    "outputFile": "public/build/tailwind.css"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development postcss $npm_package_config_inputFile -o $npm_package_config_outputFile",
+    "prod": "cross-env NODE_ENV=production postcss $npm_package_config_inputFile -o $npm_package_config_outputFile",
+    "watch": "cross-env NODE_ENV=development postcss $npm_package_config_inputFile -o $npm_package_config_outputFile --watch"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "cssnano": "^4.1.10",
+    "postcss": "^8.2.1",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.2"
+  }
+}
