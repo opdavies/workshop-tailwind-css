@@ -11,6 +11,9 @@ module.exports = {
       blue: colors.lightBlue,
       gray: colors.trueGray
     },
+    fontFamily: {
+      display: ['Bebas Neue', 'Arial Narrow', 'Arial', 'sans-serif']
+    },
   },
   variants: {
     extend: {},
