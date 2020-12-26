@@ -7,12 +7,12 @@
         </div>
 
         <div class="max-h-16 flex items-center justify-end">
-            <button aria-label="Toggle menu">
+            <button type="button" @click="isOpen = !isOpen" aria-label="Toggle menu">
                 <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
         </div>
     </div>
-    <div class="absolute top-16 w-full bg-white">
+    <div class="absolute top-16 w-full bg-white" x-cloak x-show="isOpen">
         <ul>
             {% for item in menuLinks.findAll %}
                 <li>
