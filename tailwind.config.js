@@ -7,6 +7,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        display: ['Bebas Neue', 'Arial Narrow', 'Arial', 'sans-serif'],
+        sans: ['Helvetica', 'Arial', 'sans-serif']
+      },
       screens: {
         sm: '700px'
       }
@@ -17,10 +21,7 @@ module.exports = {
       dandelion: '#FFDC67',
       gray: colors.trueGray,
       white: '#ffffff'
-    },
-    fontFamily: {
-      display: ['Bebas Neue', 'Arial Narrow', 'Arial', 'sans-serif']
-    },
+    }
   },
   variants: {
     extend: {},
