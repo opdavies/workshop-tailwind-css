@@ -12,7 +12,7 @@
             </button>
         </div>
     </div>
-    <div class="absolute top-16 w-full bg-white" x-cloak x-show="isOpen">
+    <div class="w-full h-full fixed top-16 right-0 border-l-2 bg-white sm:max-w-sm" x-cloak x-show="isOpen">
         <ul>
             {% for item in menuLinks.findAll %}
                 <li x-data="{ isOpen: false }">
