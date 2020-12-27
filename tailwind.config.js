@@ -20,6 +20,7 @@ module.exports = {
       blue: colors.lightBlue,
       dandelion: '#FFDC67',
       gray: colors.trueGray,
+      orange: colors.amber,
       white: '#ffffff'
     }
   },

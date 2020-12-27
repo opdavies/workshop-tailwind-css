@@ -3,4 +3,7 @@
 {% block content %}
     {% include 'includes/home/header.html.twig' %}
     {% include 'includes/home/description.html.twig' %}
+    {% include 'includes/home/featured-speakers.html.twig' with {
+        featured_speakers,
+    } only %}
 {% endblock %}
