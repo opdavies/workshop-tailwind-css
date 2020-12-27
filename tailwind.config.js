@@ -12,8 +12,11 @@ module.exports = {
       }
     },
     colors: {
+      'hit-pink': '#FBA786',
       blue: colors.lightBlue,
-      gray: colors.trueGray
+      dandelion: '#FFDC67',
+      gray: colors.trueGray,
+      white: '#ffffff'
     },
     fontFamily: {
       display: ['Bebas Neue', 'Arial Narrow', 'Arial', 'sans-serif']
