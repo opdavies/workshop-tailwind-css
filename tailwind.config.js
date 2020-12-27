@@ -6,7 +6,11 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        sm: '700px'
+      }
+    },
     colors: {
       blue: colors.lightBlue,
       gray: colors.trueGray
