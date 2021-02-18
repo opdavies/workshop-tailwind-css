@@ -11,10 +11,15 @@ module.exports = {
         DEFAULT: '#56a9db',
         dark: '#1772ae',
       },
+      bronze: '#998100',
+      gold: '#e6c200',
       gray: {
+        light: '#fafafa',
         dark: '#333333',
       },
       orange: '#fcb040',
+      platinum: '#666666',
+      silver: '#999999',
       white: '#ffffff',
     },
     extend: {

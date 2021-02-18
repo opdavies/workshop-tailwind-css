@@ -1,14 +1,27 @@
-<div>
-    <h2>{{ title }}</h2>
+{% set titleClasses = [
+    'text-5xl font-display',
+    type == 'bronze' ? 'text-bronze',
+    type == 'gold' ? 'text-gold',
+    type == 'in_kind' ? 'text-blue-dark',
+    type == 'platinum' ? 'text-platinum',
+    type == 'silver' ? 'text-silver',
+] %}
 
-    <ul>
-        {% for sponsor in sponsors.findByType(type) %}
-            <li>
-                <a href="#0">
-                    <img src="{{ sponsor.logo_url }}" alt="">
-                    <p>{{ sponsor.name }}</p>
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
+<div class="mt-10 text-center">
+    <h2 class="{{ titleClasses|join(' ')|trim }}">{{ title }}</h2>
+
+    <div class="mt-6">
+        <ul class="flex flex-wrap justify-center mx-auto -mt-2 -ml-2">
+            {% for sponsor in sponsors.findByType(type) %}
+                <li class="mt-2 ml-2">
+                    <a class="flex flex-col items-center justify-center w-64 h-48 p-4 bg-gray-light" href="#0">
+                        <span class="flex items-center h-full">
+                            <img class="block w-4/5 max-h-full mx-auto" src="{{ sponsor.logo_url }}" alt="">
+                        </span>
+                        <p class="sr-only">{{ sponsor.name }}</p>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 </div>
