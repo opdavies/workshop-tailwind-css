@@ -15,6 +15,7 @@
         "symfony/maker-bundle": "^1.26",
         "symfony/twig-bundle": "5.2.*",
         "symfony/yaml": "5.2.*",
+        "tightenco/collect": "^8.19",
         "twig/extra-bundle": "^2.12|^3.0",
         "twig/twig": "^2.12|^3.0"
     },

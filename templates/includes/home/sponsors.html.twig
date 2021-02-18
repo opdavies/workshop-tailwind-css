@@ -1,0 +1,30 @@
+<div>
+    <h2>Sponsors</h2>
+
+    <div>
+        {% include 'includes/sponsor-list.html.twig' with {
+            title: 'Platinum Sponsors',
+            type: 'platinum',
+        } only %}
+
+        {% include 'includes/sponsor-list.html.twig' with {
+            title: 'Gold Sponsors',
+            type: 'gold',
+        } only %}
+
+        {% include 'includes/sponsor-list.html.twig' with {
+            title: 'Silver Sponsors',
+            type: 'silver',
+        } only %}
+
+        {% include 'includes/sponsor-list.html.twig' with {
+            title: 'Bronze Sponsors',
+            type: 'bronze',
+        } only %}
+
+        {% include 'includes/sponsor-list.html.twig' with {
+            title: 'In Kind Sponsors',
+            type: 'in_kind',
+        } only %}
+    </div>
+</div>

@@ -2,3 +2,4 @@ twig:
     default_path: '%kernel.project_dir%/templates'
     globals:
         menu_items: '@App\Repository\MenuItemRepository'
+        sponsors: '@App\Repository\SponsorRepository'
