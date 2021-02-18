@@ -1,5 +1,5 @@
 module.exports = {
-  purge: [],
+  purge: ['templates/**/*.twig'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
